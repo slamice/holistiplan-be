@@ -9,9 +9,10 @@ urlpatterns = [
         "snippets/<int:pk>/highlight/",
         views.SnippetHighlight.as_view(),
         name="snippet-highlight",
-    ),  
+    ),
     path("users/", views.UserList.as_view(), name="user-list"),
-    path("users/<int:pk>/", views.UserDetail.as_view(), name="user-detail"),
+    # path("users/<int:pk>/", views.UserDetail.as_view(), name="user-detail"),
+    # path("users/<int:pk>/delete", views.UserDelete.as_view(), name="user-delete"),
     path("", views.api_root),
 ]
 
